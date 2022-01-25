@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <div class="SignLog">
+                <h1 class="PageActivity signInTitle">Sign in</h1>
+                <h1 class="loginTitle">Log in</h1>
+            </div>
+            <form action="index.html" method="get" class="formularioSignIn formularioForm">
+                <label for="UserOrEmail">Email</label>
+                <input type="text" class="Email" placeholder="exemple@email.com">
+                <label for="Senha">Password</label>
+                <input type="password" class="SenhaSign" placeholder="Password">
+                <label class="labelCheckbox"><input type="checkbox" class="checkboxRM">Remember me</label>      
+                <button class="btnForm" id="btnFormSignIn">Sign in</button>
+                <button class="btn btnGoogle"><img src="imgs/googleIcon.png" alt="Google"></button>
+            </form>
+
+            <form action="" class="formularioLogIn formularioForm" style="display: none;">
+                <label for="NomeDeUsuário">Create a user name</label>
+                <input type="text" class="UserInput" placeholder="Nome de usuario">
+                <label for="Email">Email</label>
+                <input type="email" class="EmailInput" placeholder="exemple@email.com">
+                <label for="senha">Password</label>
+                <input type="password" placeholder="Senha" class="SenhaInput">
+                <label for="checkInput" class="labelCheckbox"><input type="checkbox" id="checkInput"> I accept the terms</label>
+                <button class="btn" id="btnFormLogin">Create account</button>
+            </form>
+            <footer class="formFooter">&copy;2022 All rights reserved</footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

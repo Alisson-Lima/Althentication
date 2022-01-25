@@ -1,0 +1,273 @@
+@font-face {
+  font-family: Arabic;
+  src: url(font/ArabicFont.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: Arabic;
+  letter-spacing: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  color: #222222;
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes loadingForm {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes loadingForm {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bodyLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bodyLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes signInLogIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 99px;
+    opacity: 1;
+  }
+}
+
+@keyframes signInLogIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 99px;
+    opacity: 1;
+  }
+}
+
+body h1.PageActivity {
+  color: #222222;
+}
+
+body h1.PageActivity::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 5px;
+  background: #E0139A;
+  top: -10px;
+  color: #222222;
+  opacity: 0;
+  -webkit-animation: signInLogIn .8s normal;
+          animation: signInLogIn .8s normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body .btnForm, body .btn {
+  height: 55px;
+  min-width: 100%;
+  max-width: 320px;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+body .btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4F6FFC;
+  border: 3px solid #4F6FFC;
+}
+
+body .btn img {
+  width: 40px;
+}
+
+body .btnGoogle {
+  border: none;
+}
+
+body .btnForm {
+  background: #4F6FFC;
+  color: white;
+}
+
+body .btnForm:hover {
+  background-color: #5d7bfd;
+}
+
+body .container {
+  position: relative;
+  background-image: url(imgs/bg.png);
+  background-position: 0 -230px;
+  width: 100%;
+  height: 100vh;
+  -webkit-animation: bodyLoading 1s normal;
+          animation: bodyLoading 1s normal;
+}
+
+body .container .formulario {
+  -webkit-animation: loadingForm 1s ease;
+          animation: loadingForm 1s ease;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  position: relative;
+  background: white;
+  margin-top: 0;
+  top: calc(50% - 300px);
+  left: calc(50% - 175px);
+  height: auto;
+  width: 350px;
+  padding: 50px 30px;
+}
+
+body .container .formulario div.SignLog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+body .container .formulario div.SignLog h1 {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+body .container .formulario .formularioForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .formulario .formularioForm input {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #EAF5F9;
+  border: none;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+body .container .formulario .formularioForm label.labelCheckbox {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  margin-bottom: 30px;
+}
+
+body .container .formulario .formularioForm label.labelCheckbox input {
+  margin-bottom: 0;
+  width: 20px;
+  margin-right: 10px;
+}
+
+body .container .formulario footer {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media screen and (min-width: 1100px) {
+  body .container .formulario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 100px;
+    -webkit-box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4);
+            box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 550px;
+  }
+  body .container .formulario div.SignLog {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1690px) {
+  body .container {
+    border: 15px solid #222222;
+    width: 1600px;
+    height: 800px;
+    border-radius: 50px;
+    margin-top: calc(50vh - 400px);
+    margin-left: calc(50vw - 800px);
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=style.css.map */
